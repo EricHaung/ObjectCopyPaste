@@ -10,7 +10,7 @@ public static class CopyPaste
     private static Object[] cacheSelectedObjects = null;
     private static List<Object> ObjectList = null;
 
-    private static void CopyObject()
+    public static void CopyObject()
     {
         InitCacheContenter();
 
@@ -50,7 +50,7 @@ public static class CopyPaste
         return false;
     }
 
-    public static GameObject FindObject(string id)
+    private static GameObject FindObject(string id)
     {
         SceneObjectTag[] parentObj = MonoBehaviour.FindObjectsOfType<SceneObjectTag>();
 
@@ -109,7 +109,7 @@ public static class CopyPaste
         return selectedObjects;
     }
 
-    private static void DuplicateObjects(GameObject[] objArray, UnitData[] resArray, List<Object> sourceObjects)
+    public static void DuplicateObjects(GameObject[] objArray, UnitData[] resArray, List<Object> sourceObjects)
     {
         for (int i = 0; i < sourceObjects.Count; ++i)
         {
